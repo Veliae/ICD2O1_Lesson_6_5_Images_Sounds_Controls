@@ -10,7 +10,7 @@ HEIGHT = 500
 SIZE = (WIDTH, HEIGHT)
 
 screen = pygame.display.set_mode(SIZE)
-pygame.display.set_caption("My game")
+pygame.display.set_caption("Pygame Lesson 6.5")
 # ---------------------------
 
 # Used to manage how fast the screen updates
@@ -20,7 +20,8 @@ clock = pygame.time.Clock()
 # Initialize global variables
 
 # --------- Colours ---------
-
+white = (255, 255, 255)
+black = (0, 0, 0)
 
 # --------- Images ----------
 
@@ -43,14 +44,15 @@ while running:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
-    
+
     # ----- USER INPUTS -----
+
 
     # ----- GAME STATE UPDATES -----
     # All game math and comparisons happen here
 
     # ----- DRAWING -----
-    screen.fill((255, 255, 255))  # always the first drawing command
+    screen.fill(white)  # always the first drawing command
 
     # Must be the last two lines of the game loop
     pygame.display.flip()
